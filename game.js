@@ -39,13 +39,32 @@ if (playerSelection === computerSelection){
     }
 }
 
-const player = prompt("Choose one: Rock, Paper, or Scissors");
-const playerSelection = player.toLowerCase();
-const computerSelection = getComputerChoice();
+function playGame(){
+  let playerScore = 0;
+  let computerScore = 0;
 
-console.log(`Computer chose ${computerSelection}!`);
-console.log(`Player chose ${playerSelection}!`);
-console.log(playRound(playerSelection, computerSelection));
+  for(let i = 0; i < 5; i++ ){
+    const player = prompt("Lets play 5 rounds !! \nChoose one: Rock, Paper, or Scissors");
+    const playerSelection = player.toLowerCase();
+    const computerSelection = getComputerChoice();
 
-const resultMessage = playRound(playerSelection, computerSelection);
-alert(resultMessage + "\nComputer chose " + computerSelection + ", You chose " + playerSelection + " !");
+    const resultMessage = playRound(playerSelection, computerSelection);
+    alert(resultMessage + "\nComputer chose " +  computerSelection + ", You chose " + playerSelection);
+
+    if (resultMessage.includes("win")){
+      playerScore++;
+    } else if (resultMessage.includes("lose")){
+      computerScore++;
+    }
+  }
+    if(playerScore > computerScore){
+      alert("You won the game! Final score: You - " + playerScore + " , Computer - " + computerScore);
+    } else if (computerScore > playerScore){
+      alert("You lost the game! Final score: You - " + playerScore + " , Computer - " + computerScore);
+    } else {
+      alert("It's a tie! Final score: You - " + playerScore + ", Computer - " + computerScore);
+    }
+
+  }
+
+  playGame();
