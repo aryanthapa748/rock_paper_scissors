@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Comic Sans MS, sans-serif ;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    color: white;
+    background-color: rgb(136, 56, 189);
+}
+
+.gluck{
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 78vh;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    height: 500px;
+    width: 500px;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-image: url(images/rockpaperscissors_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.containerButton{
+    display: flex;
+    gap: 25px;
+}
+
+.containerResult{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#btn-1, #btn-2, #btn-3{
+    height: 50px;
+    width: 60px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px 12px 12px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.links a{
+    text-decoration: underline;
+    color: black;
+    
+}
+
+a:hover{
+    color: rgb(124, 31, 218);
+}
+
+
+
